@@ -1,6 +1,7 @@
 import React from 'react';
+import BaseComponent from './BaseComponent';
 
-class Home extends React.Component {
+class Home extends BaseComponent {
 
     render () {
         return (

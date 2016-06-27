@@ -1,6 +1,7 @@
 import React from 'react';
+import BaseComponent from './BaseComponent';
 
-class Profile extends React.Component {
+class Profile extends BaseComponent {
 
     render () {
         return (
