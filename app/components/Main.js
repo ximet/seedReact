@@ -1,13 +1,32 @@
 import React from 'react';
 import BaseComponent from './BaseComponent';
+import { browserHistory } from 'react-router'
 
 class Main extends BaseComponent  {
 
+    constructor (props, context) {
+        super(props, context);
+
+        this.router = context.router || null;
+        
+    }
+    handlerRedirect () {
+        this.context.router.push('/profile');
+    }
+    
     render () {
         return (
-            <div>Main</div>
+            <div>
+                We have main page
+                <div onClick={this.handlerRedirect}>Go to Profile</div>
+            </div>
         )
     }
+    
 }
+
+Main.contextTypes = {
+    router: React.PropTypes.func.isRequired
+};
 
 export default Main;
