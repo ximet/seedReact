@@ -1,10 +1,12 @@
-var React = require('react');
-var Main = require('../components/Main');
-var Router = require('react-router');
+import React from 'react';
+import Main from '../components/Main';
+import Home from '../components/Home';
+import Profile from '../components/Profile';
+import { Route, IndexRoute } from 'react-router';
 
-var DefaultRoute = Router.DefaultRoute;
-var Route = Router.Route;
-
-module.exports = (
-    <Route name='app' path='/' handler={ Main }> </Route>
+export default (
+    <Route path="/" component={Main}>
+        <Route path="profile/" component={Profile} />
+        <IndexRoute component={Home} />
+    </Route>
 );
