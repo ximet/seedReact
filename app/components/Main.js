@@ -18,7 +18,7 @@ class Main extends BaseComponent  {
         return (
             <div>
                 We have main page
-                <div onClick={this.handlerRedirect}>Go to Profile</div>
+                <div onClick={this.handlerRedirect.bind(this)}>Go to Profile</div>
             </div>
         )
     }
