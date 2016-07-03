@@ -9,6 +9,7 @@ export default class App extends BaseComponent {
     render () {
         return (
             <div className="mainContainer">
+                <h1>NYT News Titles</h1>
                 {this.props.children}
             </div>
         );
